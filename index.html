@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Conference Room</title>
+</head>
+
+<body>
+    <div id='selectRoom'>
+
+        <input type='text' class='col-lg-4' id='roomNumber' placeholder='Room Number' />
+        <button id='goRoom' class='col-lg-4'>Join</button>
+    </div>
+    <div class='row' style='border:1px solid lightgrey; width:100%; border-radius:20px; padding:20px;'>
+        <div class='col-lg-8 bg-alert' id='consultingRoom' style='visibility:hiden'>
+            <div id='remoteVideoHolder' class='col-lg-12'>
+                <video autoplay id='remoteVideo'></video>
+            </div>
+            <div clas='col-lg-4'>
+                <video autoplay id='localVideo'></video>
+            </div>
+        </div>
+        <div class='col-lg-4'>
+            <i>chats</i>
+        </div>
+
+
+    </div>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='client.js'></script>
+</body>
