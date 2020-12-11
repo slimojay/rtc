@@ -1,0 +1,2 @@
+[12-Nov-2020 06:40:50 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/remotecourt/rtc_app/public/session.php on line 22
+[12-Nov-2020 06:43:58 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/remotecourt/rtc_app/public/session.php on line 22

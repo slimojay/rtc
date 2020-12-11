@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO TO SESSION</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+            input{
+                width: 180px;
+                height: 40px;
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 5px 20px 5px 20px;
+                
+            }
+            input#name{
+                width:300px;
+            }
+            label{
+                margin:15px;
+            }
+            button{
+                padding:5px 30px;
+                border-radius: 15px;
+                color:white;
+                background-color: rgba(9, 179, 37, 0.945);
+                border:2px solid green;
+            }
+            form{
+                /* position: relative; */
+                margin-top: 10%;
+            }
+            .logo{
+                text-align:center;
+                margin-top:70px;
+            }
+            
+    </style>
+</head>
+<body>
+    
+    <div class="container" id="body" style="">
+        <div class="logo"><img src="remotecourtlogo2.png" width="200" height="120px" alt=""></div>
+       <center> <form id='fmm'>
+            <label> Name:  <input type="text" name="username" id="name" placeholder="enter name" required autofocus> </label>
+           <!-- <label> Session ID:  <input type="text" name="session_id" id="" placeholder="enter Session ID" required> </label>
+            <label> Password:  <input type="password" name="session_pw" id="" placeholder="enter password" required> </label>-->
+            <label> Room:  <input type="text" name="room" id="room" placeholder="room number" required> </label>
+            <button type="submit" value="submit">JOIN</button>
+        </form></center>
+    </div>
+    
+    
+    <script>
+       document.getElementById('fmm').onsubmit = function(e){
+            //e.preventDefault();
+            var userName = document.getElementById('name');
+            var roomNumber = document.getElementById('room');
+            var fm = document.getElementById('fmm');
+            fm.setAttribute('action', '/session.html?name=' + userName.value + '&room=' + room.value)
+           // window.location.replace('https://www.lagossstate.remote-court.com/session.html?name=' + userName.value + '&room=' + room.value);
+        }
+        
+        
+    </script>
+</body>
+</html>

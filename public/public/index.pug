@@ -1,0 +1,38 @@
+//first pug serving as index.html
+doctype html
+html
+    head
+      meta(charset="UTF-8")
+      meta( name="viewport", content="width=device-width, initial-scale=1.0")
+      title = "GO TO SESSION"
+      link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+
+      //jQuery library -->
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+
+      // Popper JS -->
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+
+      //Latest compiled JavaScript -->
+      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+      style(rel="/style.css", type="text/css")
+    body(style='text-align:center')
+      div.container#body
+        div.logo
+          img(src="remotecourtlogo2.png", width="200", height="120px", alt="Remote Court")
+        center
+          form#fm(action="/index", method="post")
+            input(type="text", name="fullname", required, autofocus, placeholder=" Enter Fullname" )
+            select(name="interest" required)
+               option(value="judge") JUDGE 
+               option(value="defendant_counsel") defense counsel
+               option(value="prosecution_counsel") prosecution counsel
+               option(value="plaintiff_counsel") counsel to plaintiff
+               option(value="plaintiff") plaintiff/complainant
+               option(value="defendant") defendant
+               option(value="witness") witness (EYE/EXPERT/CHARACTER)
+            input(type="password", name="password", required, autofocus, placeholder=" Session Password")
+            input(type="submit", name="sub", value="GOTO SESSION")
+      footer
+        |&copy 2020
+        |GLOBAL T & T SOLUTIONS
